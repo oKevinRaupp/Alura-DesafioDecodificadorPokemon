@@ -1,8 +1,11 @@
-let imagemProcurando = document.querySelector("#imagem__direta");
+let imagemDireita = document.querySelector("#imagem__direta");
 let titulo = document.querySelector(".direita__div__titulo");
 let paragrafo = document.querySelector(".direita__div__texto");
 let resposta = document.querySelector(".direita__div__reposta__paragrafo");
 let copiar = document.querySelector("#btn-copiar");
+
+var novaImagemDireitaCriptografada = "assets/haunter-segredo-guardado.png";
+var novaImagemDireitaDescriptografada = "assets/gengar-segredo-descoberto1.png";
 
 function criptografar() {
     let stringCriptografada = document.querySelector('#input').value;
@@ -14,8 +17,9 @@ function criptografar() {
         .replaceAll("o", "ober")
         .replaceAll("u", "ufat");
 
-    imagemProcurando.remove();
-    titulo.remove();
+    trocarImagem(novaImagemDireitaCriptografada);
+
+    titulo.innerHTML = "Seu segredo está guardado MUAHAHAHA!";
     paragrafo.remove();
 
     if (!stringCriptografada) stringCriptografada = 'Nenhuma mensagem, tente novamente! ';
@@ -30,8 +34,9 @@ function descriptografar() {
 
     stringDescriptografada = stringDescriptografada.replaceAll("enter", "e").replaceAll("imes", "i").replaceAll("ai", "a").replaceAll("ober", "o").replaceAll("ufat", "u");
 
-    imagemProcurando.remove();
-    titulo.remove();
+    trocarImagem(novaImagemDireitaDescriptografada);
+
+    titulo.innerHTML = "Seu segredo foi descoberto MUAHAHAHA!";
     paragrafo.remove();
 
     if (!stringDescriptografada) stringDescriptografada = 'Nenhuma mensagem, tente novamente! ';
@@ -40,7 +45,10 @@ function descriptografar() {
 
     resposta.innerHTML = stringDescriptografada;
 }
-z
+
+function trocarImagem(imagem) {
+    imagemDireita.src = imagem;
+}
 
 function copiarTexto() {
     navigator.clipboard.writeText(resposta.innerHTML).then(() => copiar.innerHTML = "Texto copiado!");

@@ -39,15 +39,15 @@
 }
 
 #input {
-    color: var(--secondary-color);
-    font-size: 24px;
+    color: var(--terciary-color);
+    font-size: 28px;
     font-weight: 400;
     border: solid var(--secondary-color);
     background-size: cover;
     background-position: center;
     border-radius: 24px;
-    background: transparent;
-    background-image: url("/assets/haunter-background3.png");
+    background: black;
+    background-image: url("/assets/gengar-image.png");
     background-position: -2.7rem;
     background-size: cover;
     line-height: 200%;
@@ -57,7 +57,7 @@
 }
 
 #input::placeholder {
-    color: #363062;
+    color: var(--terciary-color);
 }
 
 .esquerda__div__aviso {
@@ -81,7 +81,7 @@
     background-color: var(--secondary-color);
     border-style: solid;
     border-color: var(--secondary-color);
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     color: var(--terciary-color);
 }
@@ -94,14 +94,16 @@
     background-color: var(--primary-color);
     border-style: solid;
     border-color: var(--secondary-color);
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     color: var(--terciary-color);
 }
 
 .main__section__direita {
     border: solid;
-    border-radius: 23px;
+    border-color: var(--secondary-color);
+    background-color: black;
+    border-radius: 24px;
     display: flex;
     justify-content: center;
     margin: 1.5%;
@@ -116,29 +118,38 @@
     text-align: center;
 }
 
-.direita__div__texto {}
+.direita__div__titulo {
+    color: var(--terciary-color);
+    margin-top: 4%;
+}
+
+.direita__div__texto {
+    color: var(--terciary-color);
+}
 
 .direita_div__resposta {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    color: var(--terciary-color);
     width: 100%;
-    height: 70%;
+    height: 100%;
+    margin: 2%;
 }
 
 .direita__div__reposta__paragrafo {
     width: 100%;
-    text-align: left
+    text-align: left;
+    font-size: 22px;
 }
 
 #btn-copiar {
-    width: 30%;
-    align-items: center;
     width: 40%;
     height: 3rem;
     border-radius: 20px;
     background-color: var(--secondary-color);
+    color: var(--terciary-color);
     border-style: solid;
     border-color: var(--secondary-color);
     font-size: 16px;
@@ -155,4 +166,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 400;
+}
+
+a {
+    color: black;
 }
