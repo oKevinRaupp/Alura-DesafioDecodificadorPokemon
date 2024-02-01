@@ -332,3 +332,54 @@ a {
         font-size: 1.2rem;
     }
 }
+
+@media (max-width: 500px) {
+
+    #input {
+        font-size: 0.6rem;
+        height: 70%;
+    }
+
+    .esquerda__div__botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn__blue {
+        width: 100%;
+        font-size: 0.75rem;
+    }
+
+    .btn__white {
+        width: 100%;
+        font-size: 0.75rem;
+    }
+
+    #btn-copiar {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
+    .container__header__pokebola {
+        width: 15%;
+    }
+
+    .container__header__Titulo {
+        margin-right: 1%;
+        font-size: 1.2rem;
+    }
+
+    .direita__div__titulo {
+        font-size: 0.85rem;
+    }
+
+    .direita__div__texto {
+        font-size: 0.55rem;
+    }
+
+    .direita_div__resposta {
+        font-size: 0.6rem;
+    }
+
+}

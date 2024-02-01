@@ -17,19 +17,24 @@ function criptografar() {
         .replaceAll("o", "ober")
         .replaceAll("u", "ufat");
 
+    if (verificarMaiuscularOuAcento(stringCriptografada)) {
+        alert("Atenção, letras maiúsculas ou com acentos NÃO serão criptografadas.");
+    }
+
     if (!stringCriptografada) {
-        imagemDireita.remove();
-        titulo.remove();
-        paragrafo.remove();
+        limparTela(imagemDireita, titulo, paragrafo);
+        copiar.style.display = "none";
+
         stringCriptografada = 'Nenhuma mensagem, tente novamente! ';
+
         resposta.innerHTML = stringCriptografada;
     } else {
+        voltarTela(imagemDireita, titulo, paragrafo);
         trocarImagem(novaImagemDireitaCriptografada);
+        paragrafo.remove();
+        copiar.style.display = "block";
 
         titulo.innerHTML = "Seu segredo está guardado MUAHAHAHA!";
-        paragrafo.remove();
-
-        copiar.removeAttribute("hidden");
 
         resposta.innerHTML = stringCriptografada;
     }
@@ -45,21 +50,24 @@ function descriptografar() {
         .replaceAll("ober", "o")
         .replaceAll("ufat", "u");
 
+    if (verificarMaiuscularOuAcento(stringDescriptografada)) {
+        alert("Atenção, letras maiúsculas ou com acentos NÃO serão descriptografadas.");
+    }
 
     if (!stringDescriptografada) {
-        imagemDireita.remove()
-        titulo.remove()
-        paragrafo.remove();
+        limparTela(imagemDireita, titulo, paragrafo);
+        copiar.style.display = "none";
 
         stringDescriptografada = 'Nenhuma mensagem, tente novamente! ';
+
         resposta.innerHTML = stringDescriptografada;
     } else {
+        voltarTela(imagemDireita, titulo, paragrafo);
         trocarImagem(novaImagemDireitaDescriptografada);
+        paragrafo.remove();
+        copiar.style.display = "block";
 
         titulo.innerHTML = "Seu segredo foi descoberto HEHEHEHE!";
-        paragrafo.remove();
-
-        copiar.removeAttribute("hidden");
 
         resposta.innerHTML = stringDescriptografada;
     }
@@ -75,11 +83,29 @@ function copiarTexto() {
     limparInput();
 
     setTimeout(function () {
-        copiar.innerHTML = "Copiar texto"
+        copiar.innerHTML = "Copiar texto";
     }, 2000)
 }
 
 function limparInput() {
     let input = document.querySelector(".input");
     input.value = "";
+}
+
+function limparTela(imagem, titulo, texto) {
+    imagem.style.display = "none";
+    titulo.style.display = "none";
+    texto.style.display = "none";
+}
+
+function voltarTela(imagem, titulo, texto) {
+    imagem.style.display = "flex";
+    titulo.style.display = "flex";
+    texto.style.display = "flex";
+}
+
+function verificarMaiuscularOuAcento(texto) {
+    const regexMaiuscula = /[A-Z]/;
+    const regexAcentuacao = /[áàãâéèêíïóôõöúüç]/i;
+    return regexMaiuscula.test(texto) || regexAcentuacao.test(texto);
 }
