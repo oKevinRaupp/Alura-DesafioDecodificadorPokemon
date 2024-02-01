@@ -22,10 +22,9 @@
 .container__header {}
 
 .container__header__pokebola {
-
     width: 3.5%;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 .container__main {
@@ -35,7 +34,6 @@
 }
 
 .main__section__esquerda {
-    border: solid;
     margin: 1.5%;
     width: 35%;
 }
@@ -49,7 +47,7 @@
     background-position: center;
     border-radius: 24px;
     background: transparent;
-    background-image: url("/assets/haunter-background.png");
+    background-image: url("/assets/haunter-background3.png");
     background-position: -2.7rem;
     background-size: cover;
     line-height: 200%;
@@ -80,6 +78,12 @@
     width: 40%;
     height: 3rem;
     border-radius: 20px;
+    background-color: var(--secondary-color);
+    border-style: solid;
+    border-color: var(--secondary-color);
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--terciary-color);
 }
 
 .btn__white {
@@ -87,10 +91,17 @@
     width: 40%;
     height: 3rem;
     border-radius: 20px;
+    background-color: var(--primary-color);
+    border-style: solid;
+    border-color: var(--secondary-color);
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--terciary-color);
 }
 
 .main__section__direita {
     border: solid;
+    border-radius: 23px;
     display: flex;
     justify-content: center;
     margin: 1.5%;
@@ -102,7 +113,10 @@
     align-items: center;
     flex-direction: column;
     width: 94%;
+    text-align: center;
 }
+
+.direita__div__texto {}
 
 .direita_div__resposta {
     display: flex;
@@ -124,11 +138,14 @@
     width: 40%;
     height: 3rem;
     border-radius: 20px;
+    background-color: var(--secondary-color);
+    border-style: solid;
+    border-color: var(--secondary-color);
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.direita__div__imagem {
-    width: 125%;
-}
+.direita__div__imagem {}
 
 .container__footer {
     color: var(--terciary-color);
@@ -136,6 +153,6 @@
     padding: 1%;
     text-align: center;
     font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
 }
