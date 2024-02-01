@@ -36,7 +36,7 @@ function descriptografar() {
 
     trocarImagem(novaImagemDireitaDescriptografada);
 
-    titulo.innerHTML = "Seu segredo foi descoberto MUAHAHAHA!";
+    titulo.innerHTML = "Seu segredo foi descoberto HEHEHEHE!";
     paragrafo.remove();
 
     if (!stringDescriptografada) stringDescriptografada = 'Nenhuma mensagem, tente novamente! ';
