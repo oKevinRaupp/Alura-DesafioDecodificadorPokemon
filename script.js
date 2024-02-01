@@ -1,7 +1,7 @@
 let imagemProcurando = document.querySelector("#imagem__direta");
 let titulo = document.querySelector(".direita__div__titulo");
 let paragrafo = document.querySelector(".direita__div__texto");
-let resposta = document.querySelector(".direita__div__reposta");
+let resposta = document.querySelector(".direita__div__reposta__paragrafo");
 let copiar = document.querySelector("#btn-copiar");
 
 function criptografar() {
