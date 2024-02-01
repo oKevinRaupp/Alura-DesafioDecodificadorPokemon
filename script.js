@@ -17,33 +17,52 @@ function criptografar() {
         .replaceAll("o", "ober")
         .replaceAll("u", "ufat");
 
-    trocarImagem(novaImagemDireitaCriptografada);
+    if (!stringCriptografada) {
+        imagemDireita.remove();
+        titulo.remove();
+        paragrafo.remove();
+        stringCriptografada = 'Nenhuma mensagem, tente novamente! ';
+        resposta.innerHTML = stringCriptografada;
+    } else {
+        trocarImagem(novaImagemDireitaCriptografada);
 
-    titulo.innerHTML = "Seu segredo está guardado MUAHAHAHA!";
-    paragrafo.remove();
+        titulo.innerHTML = "Seu segredo está guardado MUAHAHAHA!";
+        paragrafo.remove();
 
-    if (!stringCriptografada) stringCriptografada = 'Nenhuma mensagem, tente novamente! ';
+        copiar.removeAttribute("hidden");
 
-    copiar.removeAttribute("hidden");
-
-    resposta.innerHTML = stringCriptografada;
+        resposta.innerHTML = stringCriptografada;
+    }
 }
 
 function descriptografar() {
     let stringDescriptografada = document.querySelector("#input").value;
 
-    stringDescriptografada = stringDescriptografada.replaceAll("enter", "e").replaceAll("imes", "i").replaceAll("ai", "a").replaceAll("ober", "o").replaceAll("ufat", "u");
+    stringDescriptografada = stringDescriptografada
+        .replaceAll("enter", "e")
+        .replaceAll("imes", "i")
+        .replaceAll("ai", "a")
+        .replaceAll("ober", "o")
+        .replaceAll("ufat", "u");
 
-    trocarImagem(novaImagemDireitaDescriptografada);
 
-    titulo.innerHTML = "Seu segredo foi descoberto HEHEHEHE!";
-    paragrafo.remove();
+    if (!stringDescriptografada) {
+        imagemDireita.remove()
+        titulo.remove()
+        paragrafo.remove();
 
-    if (!stringDescriptografada) stringDescriptografada = 'Nenhuma mensagem, tente novamente! ';
+        stringDescriptografada = 'Nenhuma mensagem, tente novamente! ';
+        resposta.innerHTML = stringDescriptografada;
+    } else {
+        trocarImagem(novaImagemDireitaDescriptografada);
 
-    copiar.removeAttribute("hidden");
+        titulo.innerHTML = "Seu segredo foi descoberto HEHEHEHE!";
+        paragrafo.remove();
 
-    resposta.innerHTML = stringDescriptografada;
+        copiar.removeAttribute("hidden");
+
+        resposta.innerHTML = stringDescriptografada;
+    }
 }
 
 function trocarImagem(imagem) {
