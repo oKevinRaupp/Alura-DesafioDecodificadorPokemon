@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --primary-color: #4D4C7D;
+    --secondary-color: #363062;
+    --terciary-color: #D8B9C3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--primary-color);
+    font-family: 'Inter', sans-serif;
+}
+
+.container__header {}
+
+.container__header__pokebola {
+
+    width: 3.5%;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.container__main {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main__section__esquerda {
+    border: solid;
+    margin: 1.5%;
+    width: 35%;
+}
+
+#input {
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-weight: 400;
+    border: solid var(--secondary-color);
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    background: transparent;
+    background-image: url("/assets/haunter-background.png");
+    background-position: -2.7rem;
+    background-size: cover;
+    line-height: 200%;
+    width: 99%;
+    height: 80%;
+    resize: none;
+}
+
+#input::placeholder {
+    color: #363062;
+}
+
+.esquerda__div__aviso {
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.esquerda__div__aviso__imagem {}
+
+.esquerda__div__botoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn__blue {
+    margin-top: 3%;
+    width: 40%;
+    height: 3rem;
+    border-radius: 20px;
+}
+
+.btn__white {
+    margin-top: 3%;
+    width: 40%;
+    height: 3rem;
+    border-radius: 20px;
+}
+
+.main__section__direita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    margin: 1.5%;
+    width: 35%;
+}
+
+.main__section__direita__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.direita__div__imagem {}
+
+.container__footer {
+    color: var(--terciary-color);
+    background-color: var(--secondary-color);
+    padding: 1%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+}

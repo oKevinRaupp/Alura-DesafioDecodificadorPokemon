@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador Kevin</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="container">
+    <header class="container__header">
+        <img class="container__header__pokebola" src="assets/Pokebola-Misteriosa.gif" alt="Pokebola-Misteriosa">
+    </header>
+    <main class="container__main">
+        <section class="main__section__esquerda">
+            <textarea class="input" id="input" placeholder="Muahahaha, porque tanto segredo?"></textarea>
+            <div class="main__section__esquerda__div">
+                <p class="esquerda__div__aviso"><img class="esquerda__div__aviso__imagem" id="imagem__esquerda"
+                        width="4%" src="assets/exclamacao.png" alt="Aviso">Apenas
+                    letras minúsculas e sem
+                    acento.</p>
+                <div class="esquerda__div__botoes">
+                    <button onclick="criptografar()" class="btn__blue">Criptografar</button>
+                    <button onclick="descriptografar()" class="btn__white">Descriptografar</button>
+                </div>
+            </div>
+        </section>
+        <section class="main__section__direita">
+            <div class="main__section__direita__div">
+                <img class="direita__div__imagem" src="assets/gastly-haunter-gengar.png" id="imagem__direta"
+                    alt="Procurando">
+                <h2 class="direita__div__titulo">Nenhuma mensagem encontrada.</h2>
+                <p class="direita__div__texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <p class="direita__div__reposta"></p>
+                <button onclick="copiarTexto()" id="btn-copiar" hidden>Copiar texto</button>
+            </div>
+        </section>
+    </main>
+    <footer class="container__footer">
+        <p>Desenvolvido por <a href="https://www.linkedin.com/in/kevin-raupp"><strong>Kevin Raupp</strong></a></p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
