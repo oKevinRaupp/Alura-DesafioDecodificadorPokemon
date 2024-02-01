@@ -335,9 +335,22 @@ a {
 
 @media (max-width: 500px) {
 
+    .container__header__pokebola {
+        width: 15%;
+    }
+
+    .container__header__Titulo {
+        margin-right: 1%;
+        font-size: 1.2rem;
+    }
+
+    .main__section__esquerda {
+        height: 50%;
+    }
+
     #input {
         font-size: 0.6rem;
-        height: 70%;
+        height: 40%;
     }
 
     .esquerda__div__botoes {
@@ -357,20 +370,21 @@ a {
     }
 
     #btn-copiar {
-        width: 90%;
+        width: 50%;
+        height: 45%;
         font-size: 0.8rem;
     }
 
-    .container__header__pokebola {
-        width: 15%;
+    .main__section__direita {
+        height: 50%;
     }
 
-    .container__header__Titulo {
-        margin-right: 1%;
-        font-size: 1.2rem;
+    .direita__div__imagem {
+        width: 65%;
     }
 
     .direita__div__titulo {
+        margin: 0%;
         font-size: 0.85rem;
     }
 
@@ -380,6 +394,11 @@ a {
 
     .direita_div__resposta {
         font-size: 0.6rem;
+        margin: 0%;
+    }
+
+    .direita__div__reposta__paragrafo {
+        margin: 0%;
     }
 
 }
